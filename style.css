@@ -1,17 +1,28 @@
 html, body {
   height: 100%;
   width: 100%;
+  background-color: blue;
+}
+h2 {
+  text-align: center;
 }
 #container {
-  display: flex;
-  flex-direction: column;
-  width: 50vw;
-  border: 1px solid black;
+  width: 20%;
+  margin: auto;
 }
-.out-put {
-  border: 1px solid black;
-  display : inline-border;
-  width : 150px;
-  height : 40px;
-  text-align: center;
+intput, label {
+  display: block;
+}
+button {
+  display: block;
+  margin: 20px;
+  width: 120px;
+  height: 30px;
+  border: none;
+  border-radius: .5rem;
+  color: green;
+  background-color: grey;
+}
+#birth-date {
+  margin-bottom: .7rem;
 }
