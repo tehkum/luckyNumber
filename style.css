@@ -25,6 +25,9 @@ button {
   padding: 5px;
   width: 100px;
   align-content: center;
+  color:white;
+  border:none;
+  border-radius: 10px;
 }
 #birth-date {
   margin-bottom: .7rem;
