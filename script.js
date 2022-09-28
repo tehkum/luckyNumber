@@ -4,17 +4,21 @@ const buttonCheck = document.querySelector("#button-check");
 const outputDisplay = document.querySelector(".out-put");
 
 function luckyNumberCheck() {
-  const dob = birthDate.value;
-  const sum = sumOfBirthDate(dob);
-  console.log(sum)
-  if (sum % luckyNumber.value == 0) {
-    outputDisplay.innerText = luckyNumber.value + "is your lucky number";
-    console.log("birthday is lucky")
-  } else if (sum % luckyNumber.value != 0) {
-    outputDisplay.innerText = luckyNumber.value + "is not your lucky number";
-    console.log("birthday is not lucky")
+  if (luckyNumber.value > 0 && birthDate.value.trim() != 0) {
+    const dob = birthDate.value;
+    const sum = sumOfBirthDate(dob);
+    console.log(sum)
+    if (sum % luckyNumber.value == 0) {
+      outputDisplay.innerText = luckyNumber.value + "is your lucky number";
+      console.log("birthday is lucky")
+    } else if (sum % luckyNumber.value != 0) {
+      outputDisplay.innerText = luckyNumber.value + " is not your lucky number";
+      console.log("birthday is not lucky")
+    } else {
+      outputDisplay.style.display = "none";
+    }
   } else {
-    outputDisplay.style.display = "none";
+    outputDisplay.innerText = "not valid";
   }
 }
 
